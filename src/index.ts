@@ -20,8 +20,9 @@ const toStyled = (words: string[], style: string) => {
 
 const format = (words: string[], style: string, separator: string) => toStyled(words, style).join(separator);
 
-const animalHash = (input: string, { style = 'titlecase', separator = ' ' } = {}) => {
-  const hexdigest: string = Md5.hashStr(input);
+const animalHash = (input: string | number, { style = 'titlecase', separator = ' ' } = {}) => {
+  const strInput = input + '';
+  const hexdigest: string = Md5.hashStr(strInput);
   const pairs = hexdigest.match(/(..?)/g);
 
   if (!pairs) return null;
