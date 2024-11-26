@@ -1,11 +1,11 @@
-import md5 from 'md5';
+import { Md5 } from 'ts-md5';
 import compress from './compress';
 import adjectives from './adjectives';
 import colors from './colors';
 import animals from './animals';
 
 
-const toStyled = (words, style) => {
+const toStyled = (words: string[], style: string) => {
   switch (style) {
     case 'titlecase':
       return words.map(w => w.replace(/^\w/, c => c.toUpperCase()));
@@ -18,11 +18,14 @@ const toStyled = (words, style) => {
   }
 };
 
-const format = (words, style, separator) => toStyled(words, style).join(separator);
+const format = (words: string[], style: string, separator: string) => toStyled(words, style).join(separator);
 
-const animalHash = (input, { style = 'titlecase', separator = ' ' } = {}) => {
-  const hexdigest = md5(input);
+const animalHash = (input: string, { style = 'titlecase', separator = ' ' } = {}) => {
+  const hexdigest: string = Md5.hashStr(input);
   const pairs = hexdigest.match(/(..?)/g);
+
+  if (!pairs) return null;
+
   const bytes = pairs.map(x => parseInt(x, 16));
   const compressed = compress(bytes, 3);
 

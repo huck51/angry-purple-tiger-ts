@@ -1,4 +1,4 @@
-export default [
+const colors: string[] = [
   'white',
   'pearl',
   'alabaster',
@@ -256,3 +256,5 @@ export default [
   'honeysuckle',
   'chili',
 ];
+
+export default colors;

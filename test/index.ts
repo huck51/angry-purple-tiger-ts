@@ -46,7 +46,7 @@ describe('compress', () => {
 describe('wordlists', () => {
   it('should contain no duplicate entries', () => {
     const wordlist = adjectives.concat(colors).concat(animals);
-    const wordcount = wordlist.reduce((tally, word) => {
+    const wordcount = wordlist.reduce((tally: {[key: string]: number}, word) => {
       if(!tally[word]) {
         tally[word] = 1;
       } else {

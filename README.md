@@ -1,8 +1,5 @@
-# Angry Purple Tiger
-Angry Purple Tiger generates animal-based hash digests meant to be memorable
-and human-readable. Angry Purple Tiger is apt for anthropomorphizing project
-names, crypto addresses, UUIDs, or any complex string of characters that
-needs to be displayed in a user interface.
+# Angry Purple Tiger - TypeScript
+This is a fork of [Angry Purple Tiger] (https://github.com/helium/angry-purple-tiger) rewritten in TypeScript to allow for easy integration into TypeScript projects. Angry Purple Tiger generates animal-based hash digests meant to be memorable and human-readable. Angry Purple Tiger is apt for anthropomorphizing project names, crypto addresses, UUIDs, or any complex string of characters that needs to be displayed in a user interface.
 
 ## Example
 

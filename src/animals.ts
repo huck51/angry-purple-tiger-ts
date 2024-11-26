@@ -1,4 +1,4 @@
-export default [
+const animals: string[] = [
   'alligator',
   'bee',
   'bird',
@@ -256,3 +256,5 @@ export default [
   'tuna',
   'mustang'
 ];
+
+export default animals;

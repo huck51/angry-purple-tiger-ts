@@ -1,4 +1,4 @@
-const compress = (bytes, target) => {
+const compress = (bytes: number[], target: number) => {
   const { length } = bytes;
   if (target > length) throw new Error('Fewer input bytes than requested output');
 

@@ -1,4 +1,4 @@
-export default [
+const adjectives: string[] = [
   'attractive',
   'bald',
   'beautiful',
@@ -256,3 +256,5 @@ export default [
   'suave',
   'sleepy'
 ];
+
+export default adjectives;
